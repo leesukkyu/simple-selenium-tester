@@ -1,4 +1,4 @@
-# Selenium-Simple-UI-Tester
+# simple-selenium-tester
 
 SIMPLE Selenium UI Tester
 
