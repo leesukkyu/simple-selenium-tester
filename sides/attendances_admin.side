@@ -1,0 +1,156 @@
+{
+  "id": "341db10c-1b49-4d29-b93b-0ca009a5449c",
+  "version": "2.0",
+  "name": "attendances",
+  "url": "http://lee.kidsnote.com:8000",
+  "tests": [{
+    "id": "f54ed177-fae1-4122-ba78-47b1005b62b1",
+    "name": "test_final",
+    "commands": [{
+      "id": "a2dc3830-b8a7-4405-a43d-af674f1659a4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a31d394-2caf-4306-9a20-d050f09c634e",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css:finder"],
+        ["xpath=//input[@id='id_username']", "xpath:attributes"],
+        ["xpath=//div[@id='section1']/div[2]/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd50e289-af46-4a95-a3b5-b524b8be13b1",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css:finder"],
+        ["xpath=//input[@id='id_username']", "xpath:attributes"],
+        ["xpath=//div[@id='section1']/div[2]/div/div[2]/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "siena"
+    }, {
+      "id": "6bcbfbee-7bbe-4a0b-a7e5-5d95108b620c",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password",
+      "targets": [
+        ["id=id_password", "id"],
+        ["name=password", "name"],
+        ["css=#id_password", "css:finder"],
+        ["xpath=//input[@id='id_password']", "xpath:attributes"],
+        ["xpath=//div[@id='section1']/div[2]/div/div[2]/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "111111"
+    }, {
+      "id": "4f21b5a3-cb73-4f8f-b4f7-160e08de6b40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='section1']/div[2]/div/div[2]/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef5e7a86-c316-4a01-a98e-1ffac611c8e8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=원 설정",
+      "targets": [
+        ["linkText=원 설정", "linkText"],
+        ["css=.header-sub-btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(@href, '/manages/admin/')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,' 원 설정')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdf6bcb5-8d6b-471a-935c-bcf9a029e578",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=등하원 전자출결 설정",
+      "targets": [
+        ["linkText=등하원 전자출결 설정", "linkText"],
+        ["css=.collapse > li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'등하원 전자출결 설정')]", "xpath:link"],
+        ["xpath=//ul[@id='side-menu']/li[3]/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/manages/attendances/')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'등하원 전자출결 설정')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95e711b6-302e-4f04-b8c4-c05f7cc2aa4c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.eattendance-main-box:nth-child(1) .menu-list:nth-child(2) > .menu-btn",
+      "targets": [
+        ["css=.eattendance-main-box:nth-child(1) .menu-list:nth-child(2) > .menu-btn", "css:finder"],
+        ["xpath=//div[@id='electronicAttendanceWrap']/div/div/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#connect')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac5c7b58-1590-4371-aa70-3f080a2fb72e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.blue",
+      "targets": [
+        ["css=.blue", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//body/div[2]/div/div/div/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71e95d09-cc4c-4628-a195-b562041af637",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=.modal.eattendance",
+      "targets": [
+        ["css=.eattendance", "css:finder"],
+        ["xpath=//body/div[4]", "xpath:position"]
+      ],
+      "value": "5000"
+    }, {
+      "id": "35de30cb-198b-4497-8746-b1d517d82140",
+      "comment": "",
+      "command": "click",
+      "target": "css=.link-btn:nth-child(2)",
+      "targets": [
+        ["css=.link-btn:nth-child(2)", "css:finder"],
+        ["xpath=//button[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='electronicAttendanceWrap']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'직접 입력')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "3b4ac33e-45fb-4151-9209-891599360783",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f54ed177-fae1-4122-ba78-47b1005b62b1"]
+  }],
+  "urls": ["http://lee.kidsnote.com:8000/"],
+  "plugins": []
+}
