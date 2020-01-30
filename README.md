@@ -1,6 +1,6 @@
 # Selenium-Simple-UI-Tester
 
-Selenium UI Test Module
+SIMPLE Selenium UI Tester
 
 ## How to Use
 
