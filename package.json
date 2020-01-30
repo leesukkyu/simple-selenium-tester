@@ -1,6 +1,6 @@
 {
   "name": "simple-selenium-tester",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "simple selenium",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://leesukkyu@github.com/leesukkyu/Selenium-UI-Tester.git"
   },
-  "keywords": [],
+  "keywords": [
+    "selenium",
+    "ui test"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
