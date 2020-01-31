@@ -42,15 +42,18 @@ async function start() {
     fileList = fs.readdirSync(fileListPath);
     for (var i in browserList) {
       count = 0;
-      // Run synchronously.
-      await testUnit(fileList[count], browserList[i]);
+      await testUnit(fileList[count], browserList[i]); // // Run synchronously.
     }
-    !fs.existsSync(logListPath) && fs.mkdirSync(logListPath);
-    fs.writeFile(`${logListPath}/successLogList.txt`, successLogList.join("\n"), function(err) {});
-    fs.writeFile(`${logListPath}/failLogList.txt`, failLogList.join("\n"), function(err) {});
+    createLogFiles();
   } catch (error) {
     throw new Error(error);
   }
+}
+
+function createLogFiles() {
+  !fs.existsSync(logListPath) && fs.mkdirSync(logListPath);
+  fs.writeFile(`${logListPath}/successLogList.txt`, successLogList.join("\n"), function(err) {});
+  fs.writeFile(`${logListPath}/failLogList.txt`, failLogList.join("\n"), function(err) {});
 }
 
 function setBrowserList(v) {
