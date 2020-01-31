@@ -42,7 +42,7 @@ async function start() {
     fileList = fs.readdirSync(fileListPath);
     for (var i in browserList) {
       count = 0;
-      await testUnit(fileList[count], browserList[i]);
+      await testUnit(fileList[count], browserList[i]); // // Run synchronously.
     }
     createLogFiles();
   } catch (error) {
