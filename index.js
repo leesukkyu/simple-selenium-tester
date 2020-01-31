@@ -8,46 +8,53 @@ let logListPath = "./logs"; // Path of the log files
 
 let fileList = [];
 
-let count = 0;
+let browserList = [];
 
 let successLogList = [];
 
 let failLogList = [];
 
-function testUnit(file) {
-  cmd.get(
-    // run selenium-side-runner
-    `selenium-side-runner -c "browserName=firefox" ${fileListPath}/${file}`,
-    function(error, success, stderr) {
+let count = 0;
+
+function testUnit(file, browser) {
+  return new Promise(function(resolve, reject) {
+    cmd.get(`selenium-side-runner -c "browserName=${browser}" ${fileListPath}/${file}`, function(error, success, stderr) {
       if (error) {
         failLogList.push(error);
       } else {
-        successLogList.push(success, stderr);
+        successLogList.push(browser, success, stderr);
       }
       count++;
       if (fileList[count]) {
-        testUnit(fileList[count]);
+        // Run recursively and synchronously.
+        testUnit(fileList[count], browser).then(() => {
+          resolve();
+        });
       } else {
-        !fs.existsSync(logListPath) && fs.mkdirSync(logListPath);
-        fs.writeFile(`${logListPath}/successLogList.txt`, successLogList.join("\n"), function(err) {
-          console.log("");
-        });
-        fs.writeFile(`${logListPath}/failLogList.txt`, failLogList.join("\n"), function(err) {
-          console.log("");
-        });
+        resolve();
       }
-    }
-  );
+    });
+  });
 }
 
-function start() {
+async function start() {
   try {
-    count = 0;
     fileList = fs.readdirSync(fileListPath);
-    testUnit(fileList[count]);
+    for (var i in browserList) {
+      count = 0;
+      // Run synchronously.
+      await testUnit(fileList[count], browserList[i]);
+    }
+    !fs.existsSync(logListPath) && fs.mkdirSync(logListPath);
+    fs.writeFile(`${logListPath}/successLogList.txt`, successLogList.join("\n"), function(err) {});
+    fs.writeFile(`${logListPath}/failLogList.txt`, failLogList.join("\n"), function(err) {});
   } catch (error) {
     throw new Error(error);
   }
+}
+
+function setBrowserList(v) {
+  browserList = v;
 }
 
 function setFilePath(v) {
@@ -59,6 +66,7 @@ function setLogPath(v) {
 }
 
 module.exports = {
+  setBrowserList,
   setFilePath,
   setLogPath,
   start

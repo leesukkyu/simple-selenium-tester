@@ -1,0 +1,55 @@
+chrome
+[32minfo[39m:    Running ./files/attendances.side
+
+
+PASS ./DefaultSuite.test.js (7.303s)
+  Default Suite
+    ✓ test_final (5882ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        7.433s
+Ran all test suites.
+
+chrome
+[32minfo[39m:    Running ./files/attendances_admin.side
+
+
+PASS ./DefaultSuite.test.js (6.557s)
+  Default Suite
+    ✓ test_final (5171ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        6.691s, estimated 8s
+Ran all test suites.
+
+firefox
+[32minfo[39m:    Running ./files/attendances.side
+
+
+PASS ./DefaultSuite.test.js (11.607s)
+  Default Suite
+    ✓ test_final (9160ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        12.158s
+Ran all test suites.
+
+firefox
+[32minfo[39m:    Running ./files/attendances_admin.side
+
+
+PASS ./DefaultSuite.test.js (12.35s)
+  Default Suite
+    ✓ test_final (9872ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        12.909s
+Ran all test suites.

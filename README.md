@@ -14,6 +14,7 @@ SIMPLE Selenium UI Tester
 > Specify the folder where logs will be stored and the folder containing the test scenario files (.side).
 
     const simple = require("simple-selenium-tester");
+    simple.setBrowserList(["chrome", "firefox", "internet explorer", "edge", "safari"]);
     simple.setFilePath("./file");
     simple.setLogPath("./logs");
     simple.start();
